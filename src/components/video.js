@@ -3,7 +3,7 @@ import "./video.css";
 function Video({ title, channel, views, time, verify, id, children }) {
   console.log("video render");
   return (
-    <div className="thumbnail">
+    <div className="thumbnail hover:bg-gray-700">
       <img
         src={`https://picsum.photos/id/${id}/300/150`}
         alt="placeholder image"

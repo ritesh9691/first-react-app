@@ -3,14 +3,16 @@ import "./App.css";
 import videos from "./data/data.js";
 import PlayButton from "./components/playbutton.js";
 import "./components/playbutton.css";
-import Counter from "./components/counter.js";
+import AddVideo from "./components/addVideo.js";
+
 
 function App() {
   console.log("app render");
   return (
     <>
+     <AddVideo/>
       <div className="App">
-        <h1>YouTube </h1>
+        {/* <h1>YouTube </h1> */}
         {videos.map((v) => (
           <Video
             key={v.id}
@@ -25,24 +27,15 @@ function App() {
               <PlayButton
                 onPlay={() => console.log("started playing")}
                 onPuase={() => console.log("Paused")}
-               
               >
                 Play
               </PlayButton>
-              
             </div>
           </Video>
         ))}
       </div>
-      <Counter />
+     
     </>
   );
 }
 export default App;
-/* <Video
-channel={"ABC"}
-views="99k"
-time="1month ago"
-verify={true}
-title="Unspalsh Images"
-/> */

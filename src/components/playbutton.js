@@ -15,6 +15,7 @@ function PlayButton({ onPlay, onPuase }) {
 playstate(!playing);
 //    playstate(playing=>playing = !playing);
   }
-  return <button onClick={HandleClick}>{playing ? "Paused" : "Play"}</button>;
+  return <button  className="hover:bg-gray-700" 
+  onClick={HandleClick}>{playing ? "Paused" : "Play"}</button>;
 }
 export default PlayButton;
